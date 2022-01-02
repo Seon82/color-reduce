@@ -1,0 +1,17 @@
+[package]
+name = "color-reduce-native"
+version = "0.1.0"
+authors = ["Seon82"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = "2.0.2"
+color-reduce = { git = "https://github.com/Seon82/color-reduce-rs"}
+image = "0.23.14"
+napi-derive = {version = "2.0.4"}
+
+[build-dependencies]
+napi-build = "1"
