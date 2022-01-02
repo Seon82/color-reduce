@@ -1,6 +1,6 @@
 {
     "name": "@seon82/color-reduce",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Color mapper to predefined palette.",
     "main": "./dist/node/cjs/index_node.js",
     "module": "./dist/node/es/index_node.js",

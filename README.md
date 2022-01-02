@@ -6,7 +6,7 @@ color-reduce provides wasm bindings to the rust implementation of [color-reduce]
 
 # Quickstart
 ```javascript
-const {process, QuantizeMethod} = require("seon82@color-reduce");
+const {process, QuantizeMethod} = require("@seon82/color-reduce");
 const fs = require('fs')
 
 // B&W palette
