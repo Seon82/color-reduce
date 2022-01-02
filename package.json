@@ -1,5 +1,5 @@
 {
-    "name": "color-reduce",
+    "name": "@seon82/color-reduce",
     "version": "0.1.0",
     "description": "Color mapper to predefined palette.",
     "main": "./src/main/index_node.js",
@@ -12,9 +12,11 @@
         "dist"
     ],
     "scripts": {
-        "build:wasm": "wasm-pack build -t web --out-dir ../main/wasm src/wasm",
-        "build:native": "bash ./assets/build-native.sh",
-        "build:bundle": "rollup -c"
+        "build": "rm -rf dist/ && npm run build:browser && npm run build:node",
+        "build:browser": "wasm-pack build -t web --out-dir ../main/wasm_browser src/wasm",
+        "build:node": "wasm-pack build -t nodejs --out-dir ../main/wasm_node src/wasm",
+        "build:bundle": "rollup -c",
+        "optimize": "wasm-opt -Os src/main/wasm_browser/color_reduce_wasm_bg.wasm -o tmp.wasm && mv tmp.wasm src/main/wasm_browser/color_reduce_wasm_bg.wasm"
     },
     "keywords": [
         "pixel art",

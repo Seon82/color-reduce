@@ -1,4 +1,4 @@
-import * as color_reduce from "./wasm/color_reduce_wasm.js";
+import * as color_reduce from "./wasm_browser/color_reduce_wasm.js";
 import type {processInterface} from "./model";
 
 let process: processInterface;

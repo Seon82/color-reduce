@@ -23,9 +23,8 @@ dist
 src/**/*.js
 src/**/*.d.ts
 
-# Can't get it to autogenerate properly
-!src/main/native/*.d.ts 
-
+# Ignore ts
+src/wasm*
 
 # Addons
 *.node
